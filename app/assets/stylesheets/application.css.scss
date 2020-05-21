@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap";
+@import 'font_awesome5_webfont';
+
+.heading-font {
+  font-family: 'Neucha', cursive;
+  // Font Neucha, designed by Jovanny Lemonad.
+  font-weight: bold;
+}
+
+.nav-link, .navbar-brand {
+  color: black;
+  opacity:0.75;
+  &:hover {
+    color:black;
+    opacity:1;
+  }
+}
+
+.jumbotron,  {
+  background-color: white;
+}
+
+.form-control {
+  min-width:208px !important;
+}
+
+.dropdown-item {
+  opacity:0.75;
+  &:hover {
+    color:black;
+    opacity:1;
+  }
+}
+
+.btn-outline-success {
+  border-color: #ced4da;
+  color: #495057;
+  &:hover {
+    color:white;
+    background-color: #ced4da;
+    border-color: #ced4da;
+  }
+  &:focus {
+    color:white;
+    background-color: #ced4da;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(128, 189, 255, 0.5);
+  }
+  &:active {
+    background-color: #80bdff !important;
+    border-color: #80bdff !important;
+    box-shadow: 0 0 0 0.2rem rgba(128, 189, 255, 0.5);
+  }
+}
+
+.container {
+  padding-top: 10px;
+  border-top: 1px solid black;
+}
+
+.fader {
+  opacity:0.5;
+  &:hover {
+    opacity:1;
+  }
+}

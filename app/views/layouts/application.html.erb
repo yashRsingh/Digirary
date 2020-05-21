@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <title>DigiRary</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +10,90 @@
   </head>
 
   <body>
+    <header>
+      <nav class="navbar navbar-expand-xl navbar-light">
+        <%= link_to root_path, class: "navbar-brand" do %>
+          <i class="fas fa-book-reader"></i> DigiRary
+        <% end %>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <%= link_to about_path, class: "nav-link" do %>
+                About
+              <% end %>
+            </li>
+            
+            <li class="nav-item">
+              <%= link_to new_contact_path, class: "nav-link" do %>
+                Contact Us
+              <% end %>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">Donate</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Subjects
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Drawing & Painting</a>
+                <a class="dropdown-item" href="#">Economics</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Education</a>
+                <a class="dropdown-item" href="#">English Literature</a>
+                <a class="dropdown-item" href="#">General English</a>
+                <a class="dropdown-item" href="#">General Hindi</a>
+                <a class="dropdown-item" href="#">Geography</a>
+                <a class="dropdown-item" href="#">Hindi Literature</a>
+                <a class="dropdown-item" href="#">History</a>
+                <a class="dropdown-item" href="#">Home Science</a>
+                <a class="dropdown-item" href="#">Mathematics</a>
+                <a class="dropdown-item" href="#">Military Science</a>
+                <a class="dropdown-item" href="#">Music</a>
+                <a class="dropdown-item" href="#">Persian</a>
+                <a class="dropdown-item" href="#">Philosophy</a>
+                <a class="dropdown-item" href="#">Physical Education</a>
+                <a class="dropdown-item" href="#">Political Science</a>
+                <a class="dropdown-item" href="#">Sanskrit</a>
+                <a class="dropdown-item" href="#">Sociology</a>
+                <a class="dropdown-item" href="#">Urdu</a>
+              </div>
+            </li>
+              
+          </ul>
+          
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Looking for something?" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">&#x1F50E;</button>
+          </form>
+        </div>
+      </nav>
+    </header>
     <%= yield %>
+    <footer class="container text-center">
+      <div class="row">
+        <div class= "col">
+          <p>Connect with us:</p>
+          <h4><i class="fab fa-facebook-f"></i> 
+          </i> <i class="fab fa-twitter"></i> 
+          <i class="fab fa-instagram"></i> <i class="fab fa-whatsapp"></i> 
+          <i class="fab fa-youtube"></i> 
+          <i class="fab fa-google-plus-g"></i> </h4>
+        </div>
+        
+        <div class="col">
+          <p class="fader">Administrator Login</p>
+          <p class="fader">Mandatory Disclosures</p>
+          <p class></p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
